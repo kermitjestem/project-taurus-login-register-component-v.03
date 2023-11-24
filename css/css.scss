@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;400;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: var(--raisin-black);
+  }
+  50% {
+    color: var(--ghost-white);
+  }
+  100% {
+    color: var(--raisin-black);
+  }
+}
+
+:root {
+  --ghost-white: #e8e9f3;
+  --raisin-black: #272635;
+  --silver: #cecece;
+  --french-grey: #a6a6a8;
+  --non-photo-blue: #b1e5f2;
+  --shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+  --radius: 0.5rem;
+}
+
+a {
+  color: var(--raisin-black);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+span {
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 0rem;
+
+  input {
+    margin-bottom: 0.5rem;
+    width: 11rem;
+    border-radius: 1rem;
+    border-style: solid;
+    padding: 0.5rem;
+    border-color: var(--raisin-black);
+  }
+}
+
+button {
+  background-color: var(--raisin-black);
+  color: var(--ghost-white);
+  border: none;
+  border-radius: var(--radius);
+
+  padding: 0.6rem;
+  margin: 1rem;
+  width: 5.5rem;
+  max-width: 12.5rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  transition-duration: 1.5s;
+  background-color: var(--ghost-white);
+  color: var(--raisin-black);
+}
+
+.disclaimer {
+  display: flex;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  width: 80%;
+}
+
+body {
+  background-image: linear-gradient(120deg, #3a67d3, #8042c9);
+  min-height: 100vh;
+
+  font-family: Kumbh Sans;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  animation: FadeIn 3s ease 0s 1 normal forwards;
+}
+
+.blink {
+  animation-name: blink;
+
+  animation-duration: 1.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: Infinite;
+  font-weight: 600;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  background-color: var(--ghost-white);
+
+  width: 18rem;
+
+  height: 45vh;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 40vh;
+
+    img {
+      width: 7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-white {
+      display: none;
+    }
+  }
+
+  .options-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .login-page,
+  .register-page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    animation: FadeIn 3s ease 0s 1 normal forwards;
+
+    button {
+      width: 50%;
+    }
+
+    .show-password-img {
+
+      position: absolute;
+      margin: 0.2rem 0rem 0rem 9.5rem;
+      width:1.2rem;
+      cursor: pointer;
+
+
+    }
+
+    .close-window-img {
+
+      position: absolute;
+      margin-left: 18rem;
+      margin-top: -0.5rem;
+      width:1rem;
+      cursor: pointer;
+
+    }
+  }
+
+  .policy-accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .policy {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 13rem;
+    }
+
+    .input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Style for the custom checkbox */
+    .custom-checkbox {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #333;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* Style for the custom checkmark */
+    .custom-checkbox::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: #333;
+      border-radius: 2px;
+      opacity: 0;
+    }
+
+    /* Show the checkmark when checkbox is checked */
+    .input[type="checkbox"]:checked + .custom-checkbox::after {
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 40rem;
+
+
+    .logo-box {
+      width: 100%;
+
+      img {
+        width: 5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .options-box {
+      flex-direction: column;
+      width: 100%;
+    }
+
+     .login-page, .register-page {
+
+      .show-password-img {
+
+      position: absolute;
+      margin: 0.2rem 0rem 0rem 13.5rem;
+      width:1.2rem;
+      cursor: pointer;
+
+  }
+
+  .close-window-img {
+
+    position: absolute;
+    margin-left: 40rem;
+    margin-top: -0.5rem;
+    width:1rem;
+    cursor: pointer;
+
+  }
+  }
+  }
+
+
+ 
+
+  form {
+    input {
+      width: 15rem;
+    }
+  }
+}

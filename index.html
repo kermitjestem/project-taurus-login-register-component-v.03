@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projekt Taurus 0.3</title>
+
+    <link rel="stylesheet" href="css/css.css" />
+  </head>
+
+  <body>
+    <div class="box">
+      <div id="logo" class="logo-box">
+        <img
+          class="logo-black"
+          src="assets/logo_black.png"
+          alt="Project Taurus"
+        />
+        <img class="logo-white" src="assets/logo.png" alt="Project Taurus" />
+        <h3><span>Project</span> Taurus<span class="blink">_</span></h3>
+      </div>
+
+      <div id="options" class="options-box">
+        <h3><span>What are we doing then?</span></h3>
+
+        <div class="buttons">
+          <button onclick="login()">Login</button>
+          <button onclick="register()">Register</button>
+        </div>
+      </div>
+
+      <div id="login-active" class="login-page">
+        
+        
+    
+        <h3><span>Login</span><span class="blink">_</span></h3>
+        <img onclick="windowClose()"  class="close-window-img" src="assets/close_2.png" alt="close-window">
+
+        <form>
+
+         
+          <input type="text" id="input-username" placeholder="Enter your username" />
+
+       
+          <input type="password" id="input-password" placeholder="Enter your password"/>
+          <img class="show-password-img" onclick="showPassword()" src="assets/show-password.png" alt="show-password">
+          <p class="disclaimer">
+            Oops! Can't remember password?
+          </p>
+          <p class="disclaimer">
+            Click&nbsp;<a href="#">here</a>&nbsp;to reset!
+          </p>
+        </form>
+
+        <button>Login</button>
+      
+        
+      
+    </div>
+
+
+    <div id="register-active" class="register-page">
+
+      <h3><span>Register</span><span class="blink">_</span></h3>
+      <img onclick="windowClose()"  class="close-window-img" src="assets/close_2.png" alt="close-window">
+      <form>
+
+         
+        <input type="text" id="input-name" placeholder="Enter your name" />
+        <input type="text" id="input-email" placeholder="Enter your email" />
+
+     
+        <input type="password" id="input-password" placeholder="Enter your password"/>
+        <input type="password" id="input-password-repeat" placeholder="Repeat your password"
+        />
+        </p>
+      </form>
+      <div class="policy-accept">
+      
+        <label class="policy">
+          <input type="checkbox" class="input">
+          <span class="custom-checkbox"></span><p class="disclaimer">Accept our privacy policy.</p>
+        </label>
+      </div>
+
+      <button>Register</button>
+
+    </div>
+
+    <script src="js/login.js"></script>
+    <script src="js/show-password.js"></script>
+    <script src="js/close.js"></script>
+  </body>
+</html>
