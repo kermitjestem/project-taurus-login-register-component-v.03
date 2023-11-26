@@ -41,6 +41,7 @@ a {
 h3 {
   text-align: center;
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 span {
@@ -112,12 +113,12 @@ body {
 .box {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 1rem;
   background-color: var(--ghost-white);
-  width: 18rem;
-  height: 45vh;
+  width: 17rem;
+  height: 30rem;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
 }
@@ -126,7 +127,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
 }
 .box .logo-box img {
   width: 7rem;
@@ -170,8 +170,8 @@ body {
 .box .login-page .close-window-img,
 .box .register-page .close-window-img {
   position: absolute;
-  margin-left: 18rem;
-  margin-top: -0.5rem;
+  margin-left: 17rem;
+  margin-top: -10rem;
   width: 1rem;
   cursor: pointer;
 }
@@ -219,12 +219,13 @@ body {
   opacity: 1;
 }
 
-@media only screen and (min-width: 800px) {
+@media (min-height: 750px) and (min-width: 767px) {
   .box {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     width: 40rem;
+    height: 50vh;
   }
   .box .logo-box {
     width: 100%;
@@ -244,8 +245,8 @@ body {
     cursor: pointer;
   }
   .box .login-page .close-window-img, .box .register-page .close-window-img {
-    position: absolute;
-    margin-left: 40rem;
+    position: as;
+    margin-left: 20rem;
     margin-top: -0.5rem;
     width: 1rem;
     cursor: pointer;
